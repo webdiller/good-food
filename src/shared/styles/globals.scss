@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  input,
+  input::placeholder,
+  button,
+  textarea,
+  textarea::placeholder {
+    font-size: inherit;
+  }
+}
