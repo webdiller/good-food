@@ -13,11 +13,16 @@
     "prettier": "npx prettier --write ."
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "clsx": "^2.0.0",
     "next": "14.0.3",
+    "next-seo": "^6.4.0",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^2.1.0",
+    "typewind": "^0.1.4"
   },
   "devDependencies": {
     "@types/node": "^20",

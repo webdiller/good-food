@@ -7,15 +7,54 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   input,
   input::placeholder,
   button,
   textarea,
   textarea::placeholder {
     font-size: inherit;
+  }
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    height: 12px;
+    width: 26px;
+    background: #ebebe9;
+    opacity: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    &.swiper-pagination-bullet-active {
+      background: #ececec;
+      width: 55px;
+    }
+  }
+}
+
+@layer utilities {
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .inline-flex-center {
+    @apply inline-flex items-center justify-center;
   }
 }

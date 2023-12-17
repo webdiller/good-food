@@ -1,7 +1,10 @@
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
 import React, { ReactElement, ReactNode } from "react"
-import { fontMulish } from "@/src/shared/styles/fonts"
+import { fontNotoSans, fontNotoSansDisplay } from "@/src/shared/styles/fonts"
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import "swiper/css/bundle"
 import "@/src/shared/styles/globals.scss"
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -23,7 +26,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       >
         {`
           :root {
-            --font-mulish: ${fontMulish.style.fontFamily};
+            --font-noto-sans: ${fontNotoSans.style.fontFamily};
+            --font-noto-sans-display: ${fontNotoSansDisplay.style.fontFamily};
           }
         `}
       </style>
