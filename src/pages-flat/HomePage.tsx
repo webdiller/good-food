@@ -7,6 +7,7 @@ import ProcessSection from "../widgets/ProcessSection"
 import FeaturesAltSection from "../widgets/FeaturesAltSection"
 import HowWeCookSection from "../widgets/HowWeCookSection"
 import MapSection from "../widgets/MapSection"
+import MenuWidgetSection from "../widgets/MenuWidgetSection"
 const ReviewsSection = dynamic(import("../widgets/ReviewsSection"))
 const WelcomeSection = dynamic(import("../widgets/WelcomeSection"))
 
@@ -21,6 +22,7 @@ const HomePage: FC<ComponentProps> = () => {
       <div className="container my-5.5 lg:my-8">
         <FeaturesAltSection />
       </div>
+      <MenuWidgetSection />
       <div className="container my-5.5 lg:my-10">
         <ProcessSection />
       </div>

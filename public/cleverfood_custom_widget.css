@@ -1,0 +1,46 @@
+:root {
+  --cf-primary-color: #32aa71;
+  --cf-primary-color-dark: #279460;
+  --cf-primary-color-mid: #d3ebe0;
+  --cf-primary-color-light: #e4f7ee;
+  --cf-text-color: #303133;
+  --cf-text-color-light: #9fa2b4;
+  --cf-input-border-radius: 8px;
+  --cf-button-border-radius: 8px;
+  --cf-panel-border-radius: 16px;
+  --cf-font-family: "Raleway";
+  --cf-font-size-base: 14px;
+}
+
+.cf-panel > div {
+  width: 100%; /* or a specific width */
+}
+
+.cf-panel > div[style*="padding-top: 24px;"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-header2 {
+  font-weight: normal;
+  font-family: "Raleway-Bold", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .cf-panel > div[style*="padding-top: 24px;"] {
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .cf-vbox.cf-order-summary__outer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    width: 100%; /* Ensure full width if not already set */
+  }
+
+  .cf-order-summary {
+    width: 100%; /* Set the width of the inner content */
+    /* Additional styling to ensure proper layout */
+  }
+}

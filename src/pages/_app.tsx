@@ -32,6 +32,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         `}
       </style>
       <Component {...pageProps} />
+      <Script
+        type="module"
+        id="cleverfoodWebComponent"
+        src="./cleverfood.es.js"
+      />
       {process.env.NODE_ENV !== "production" ? null : (
         <>
           <Script
