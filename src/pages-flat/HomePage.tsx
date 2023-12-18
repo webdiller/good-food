@@ -36,8 +36,9 @@ const HomePage: FC<ComponentProps> = () => {
       <div className="lg:mb-3">
         <FeaturesSection />
       </div>
-      <AboutUsSection />
-      <ContactUsSection />
+      <div className="lg:mb-2">
+        <AboutUsSection />
+      </div>
     </div>
   )
 }
