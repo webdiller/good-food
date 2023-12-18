@@ -49,7 +49,7 @@ const Footer: FC<ComponentProps> = () => {
         </div>
 
         {/* NAVS */}
-        <div className="mb-7 flex max-w-[305px] flex-wrap gap-2.5 text-black lg:mb-6 lg:max-w-none lg:flex-nowrap lg:justify-between">
+        <div className="mb-7 flex max-w-[305px] flex-wrap gap-2.5 lg:gap-5 text-black lg:mb-6 lg:max-w-none lg:flex-nowrap lg:justify-between">
           {dataNav.map(({ label, href }, indx) => {
             return (
               <Link
