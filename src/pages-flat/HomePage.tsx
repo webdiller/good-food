@@ -1,6 +1,4 @@
 import React, { FC } from "react"
-import dynamic from "next/dynamic"
-import ContactUsSection from "../widgets/ContactUsSection"
 import AboutUsSection from "../widgets/AboutUsSection"
 import FeaturesSection from "../widgets/FeaturesSection"
 import ProcessSection from "../widgets/ProcessSection"
@@ -8,8 +6,8 @@ import FeaturesAltSection from "../widgets/FeaturesAltSection"
 import HowWeCookSection from "../widgets/HowWeCookSection"
 import MapSection from "../widgets/MapSection"
 import MenuWidgetSection from "../widgets/MenuWidgetSection"
-const ReviewsSection = dynamic(import("../widgets/ReviewsSection"))
-const WelcomeSection = dynamic(import("../widgets/WelcomeSection"))
+import WelcomeSection from "../widgets/WelcomeSection"
+import ReviewsSection from "../widgets/ReviewsSection"
 
 interface ComponentProps {}
 
