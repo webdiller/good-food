@@ -22,9 +22,7 @@ const WelcomeSection: FC<ComponentProps> = () => {
           clickable: true,
           bulletElement: "button",
         }}
-        autoplay={{
-          delay: 3000,
-        }}
+       
         className="text-left"
         slidesOffsetBefore={35}
         spaceBetween={35}

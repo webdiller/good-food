@@ -1,9 +1,11 @@
 import logo from "@/public/logo.svg"
 import SharedButton from "@/src/shared/ui/SharedButton"
 import clsx from "clsx"
+
 import Image from "next/image"
 import Link from "next/link"
 import { FC, useState } from "react"
+import MenuLanguage from "../MenuLanguage"
 
 interface ComponentProps {}
 
@@ -53,7 +55,7 @@ const PublicHeader: FC<ComponentProps> = () => {
               width="30"
               height="25"
               viewBox="0 0 30 25"
-              className={clsx("absolute-center stroke-secondary transition duration-300 w-2 h-2 lg:stroke-[#D9D9D9]", {
+              className={clsx("absolute-center h-2 w-2 stroke-secondary transition duration-300 lg:stroke-[#D9D9D9]", {
                 "scale-110 opacity-0": activeMenu,
                 "scale-100 opacity-100": !activeMenu,
               })}
@@ -79,7 +81,7 @@ const PublicHeader: FC<ComponentProps> = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={clsx("absolute-center stroke-secondary transition duration-300 w-2 h-2 lg:stroke-[#D9D9D9]", {
+              className={clsx("absolute-center h-2 w-2 stroke-secondary transition duration-300 lg:stroke-[#D9D9D9]", {
                 "scale-110 opacity-0": !activeMenu,
                 "scale-100 opacity-100": activeMenu,
               })}>
@@ -112,7 +114,8 @@ const PublicHeader: FC<ComponentProps> = () => {
                 />
               </svg>
             </button>
-            <button className="inline-flex-center h-[35px] w-[35px] min-w-[35px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey">RU</button>
+            
+            <MenuLanguage />
           </div>
         </div>
       </div>
