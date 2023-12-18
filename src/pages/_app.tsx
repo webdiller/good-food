@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
 import React, { ReactElement, ReactNode } from "react"
-import { fontNotoSans, fontNotoSansDisplay } from "@/src/shared/styles/fonts"
+import { fontNotoSans, fontNotoSansDisplay, fontRaleway } from "@/src/shared/styles/fonts"
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import "swiper/css/bundle"
@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
           :root {
             --font-noto-sans: ${fontNotoSans.style.fontFamily};
             --font-noto-sans-display: ${fontNotoSansDisplay.style.fontFamily};
+            --font-raleway: ${fontRaleway.style.fontFamily};
           }
         `}
       </style>

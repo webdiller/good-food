@@ -9,7 +9,7 @@ interface ComponentProps {}
 const HowWeCookSection: FC<ComponentProps> = () => {
   return (
     <div className="md:container md:grid md:grid-cols-2 md:gap-3 lg:flex lg:gap-6">
-      <div className="container mb-3.5 text-center md:hidden">
+      <div className="font-raleway container mb-3.5 text-center md:hidden">
         <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">Где мы готовим?</p>
       </div>
 

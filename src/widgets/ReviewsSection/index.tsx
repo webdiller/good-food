@@ -16,7 +16,7 @@ const ReviewsSection: FC<ComponentProps> = () => {
 
   return (
     <div className="text-center lg:text-left">
-      <div className="container mb-3.5">
+      <div className="font-raleway container mb-3.5">
         <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">Отзывы наших клиентов</p>
       </div>
 

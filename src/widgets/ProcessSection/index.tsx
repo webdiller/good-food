@@ -26,7 +26,7 @@ const dataItems = [
 
 const ProcessSection = () => {
   return (
-    <div className="space-y-5 text-center text-black lg:space-y-7">
+    <div className="font-raleway space-y-5 text-center text-black lg:space-y-7">
       <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-4sm">Процесс</p>
       <div className="mx-auto max-w-[270px] space-y-4.5 text-left lg:flex lg:max-w-[1200px] lg:justify-between lg:space-y-0 lg:text-center">
         {dataItems.map((item, indx) => {

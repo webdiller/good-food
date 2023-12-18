@@ -30,7 +30,7 @@ const dataItems = [
 
 const FeaturesAltSection = () => {
   return (
-    <div className="text-center text-black">
+    <div className="text-center text-black font-raleway">
       <p className="mb-3 inline-block text-3 font-black uppercase lg:mb-6 lg:text-4sm">Good Food — это</p>
       <div className="mx-auto max-w-[320px] space-y-3 text-left lg:flex lg:max-w-[1400px] lg:justify-between lg:space-x-3 lg:space-y-0 lg:text-center xl:grid xl:grid-cols-4 xl:gap-3 xl:space-x-0">
         {dataItems.map((item, indx) => {

@@ -13,7 +13,7 @@ const ContactUsSection: FC<ComponentProps> = () => {
           return (
             <Link
               href="/"
-              className="inline-flex h-[57px] w-[57px] min-w-[57px] items-center justify-center rounded-12 bg-secondary text-medium font-black
+              className="font-raleway inline-flex h-[57px] w-[57px] min-w-[57px] items-center justify-center rounded-12 bg-secondary text-medium font-black
            text-primary lg:h-[90px] lg:w-[90px] lg:min-w-[90px] lg:text-2lg"
               key={indx}>
               FB
