@@ -84,6 +84,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-noto-sans)"],
         display: ["var(--font-noto-sans-display)"],
+        raleway: ["var(--font-raleway)"],
       },
     },
   },
