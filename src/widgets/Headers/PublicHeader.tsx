@@ -24,7 +24,7 @@ const PublicHeader: FC<ComponentProps> = () => {
           href="/">
           <Image
             unoptimized
-            className="lg:w-[117px]"
+            className="lg:w-10"
             alt=""
             width={logo.width}
             height={logo.height}
@@ -33,7 +33,7 @@ const PublicHeader: FC<ComponentProps> = () => {
         </Link>
 
         <Link
-          className="hidden text-2md font-bold text-secondary underline underline-offset-4 hover:no-underline lg:inline-block"
+          className="hidden text-2sm font-bold text-secondary underline underline-offset-4 hover:no-underline lg:inline-block"
           href="/">
           Написать нам
         </Link>
@@ -42,7 +42,7 @@ const PublicHeader: FC<ComponentProps> = () => {
           <SharedButton
             variant="fill-secondary"
             size="default"
-            classNames="rounded-6 mr-[55px] lg:inline-flex hidden">
+            classNames="rounded text-base mr-[55px] lg:inline-flex hidden">
             Оформить заказ
           </SharedButton>
 
@@ -53,7 +53,7 @@ const PublicHeader: FC<ComponentProps> = () => {
               width="30"
               height="25"
               viewBox="0 0 30 25"
-              className={clsx("absolute-center stroke-secondary transition duration-300 lg:stroke-[#D9D9D9]", {
+              className={clsx("absolute-center stroke-secondary transition duration-300 w-2 h-2 lg:stroke-[#D9D9D9]", {
                 "scale-110 opacity-0": activeMenu,
                 "scale-100 opacity-100": !activeMenu,
               })}
@@ -79,7 +79,7 @@ const PublicHeader: FC<ComponentProps> = () => {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className={clsx("absolute-center stroke-secondary transition duration-300 lg:stroke-[#D9D9D9]", {
+              className={clsx("absolute-center stroke-secondary transition duration-300 w-2 h-2 lg:stroke-[#D9D9D9]", {
                 "scale-110 opacity-0": !activeMenu,
                 "scale-100 opacity-100": activeMenu,
               })}>
@@ -95,7 +95,7 @@ const PublicHeader: FC<ComponentProps> = () => {
           </button>
 
           <div className="ml-2 hidden space-x-2 lg:inline-flex">
-            <button className="inline-flex h-[41px] w-[41px] min-w-[41px] items-end justify-center rounded-6 border-1 border-[#EFEFEF]">
+            <button className="inline-flex h-[35px] w-[35px] min-w-[35px] items-end justify-center rounded-6 border-1 border-[#EFEFEF]">
               <svg
                 width="25"
                 height="29"
@@ -112,7 +112,7 @@ const PublicHeader: FC<ComponentProps> = () => {
                 />
               </svg>
             </button>
-            <button className="inline-flex-center h-[41px] w-[41px] min-w-[41px] rounded-6 border-1 border-[#EFEFEF] text-2sm text-grey">RU</button>
+            <button className="inline-flex-center h-[35px] w-[35px] min-w-[35px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey">RU</button>
           </div>
         </div>
       </div>
@@ -123,8 +123,8 @@ const PublicHeader: FC<ComponentProps> = () => {
           "grid-rows-[1fr]": activeMenu,
         })}>
         <div className="overflow-hidden">
-          <div className="container flex flex-col py-5">
-            <nav className="mb-8 flex flex-col justify-center space-y-2.5 text-center text-2sm text-white md:mb-0 md:flex-row md:space-x-3 md:space-y-0 lg:space-x-4.5 lg:text-2md">
+          <div className="container flex flex-col py-3">
+            <nav className="mb-6 flex flex-col justify-center space-y-2.5 text-center text-base text-white md:mb-0 md:flex-row md:space-x-3 md:space-y-0 lg:space-x-4.5 lg:text-2md">
               <Link
                 className="font-black"
                 href="/">

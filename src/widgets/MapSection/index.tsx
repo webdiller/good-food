@@ -9,11 +9,18 @@ const MapSection: FC<ComponentProps> = () => {
         <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">Карта доставки</p>
       </div>
 
-      <div className="relative h-[500px] bg-gray-300 md:flex-1 md:rounded-[35px] lg:h-[600px] overflow-hidden lg:w-[62%] lg:min-w-[62%]">
-        <iframe
+      <div className="relative h-[500px] overflow-hidden bg-gray-300 md:flex-1 md:rounded-[35px] lg:h-[600px] lg:w-[62%] lg:min-w-[62%]">
+        {/* <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad13373c7eda4af91874e0cb1a603cbe92e966ac3de28ec90336d362bfb2b1039&amp;source=constructor"
           width="100%"
-          height="100%"></iframe>
+          height="100%"></iframe> */}
+
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tbilisi+(Good%20Food)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.maps.ie/population/">Calculate population in area</a>
+          </iframe>
       </div>
 
       <div className="mx-auto mt-1.5 max-w-[92%] px-2.5 py-2 md:mt-0 md:max-w-none md:flex-1 md:bg-transparent md:p-0 lg:flex-auto">

@@ -15,7 +15,7 @@ interface ComponentProps {}
 const HomePage: FC<ComponentProps> = () => {
   return (
     <div>
-      <div className="my-2 lg:mt-0">
+      <div className="my-2 sm:mt-0">
         <WelcomeSection />
       </div>
       <div className="container my-5.5 lg:my-8">
@@ -33,9 +33,7 @@ const HomePage: FC<ComponentProps> = () => {
       <div className="my-3 lg:my-12">
         <ReviewsSection />
       </div>
-      <div className="lg:mb-3">
-        <FeaturesSection />
-      </div>
+      <FeaturesSection />
       <div className="lg:mb-2">
         <AboutUsSection />
       </div>
