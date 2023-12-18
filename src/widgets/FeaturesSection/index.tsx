@@ -11,8 +11,8 @@ const FeaturesSection: FC<ComponentProps> = () => {
       <div className="container max-w-[1180px] space-y-8 py-5 md:flex md:space-x-6 md:space-y-0 lg:justify-between lg:space-x-0 lg:py-9">
         {/* CONTENT */}
         <div className="flex flex-col text-left text-[#F9E8E1] md:w-[300px] md:max-w-[300px] lg:w-[400px] lg:max-w-[400px]">
-          <p className="lg:text-3md mb-4 text-2lg font-black lg:mb-3">Наши преимущества</p>
-          <ul className="mb-4 lg:mb-6.5 space-y-1.5 text-base font-light lg:space-y-2 lg:text-2md">
+          <p className="mb-4 text-2lg font-black lg:mb-3 lg:text-3md">Наши преимущества</p>
+          <ul className="mb-4 space-y-1.5 text-base font-light lg:mb-6.5 lg:space-y-2 lg:text-2md">
             <li>– индивидуальный подход</li>
             <li>– свежие фермерские продукты</li>
             <li>– доставка на следующее утро</li>
@@ -28,6 +28,7 @@ const FeaturesSection: FC<ComponentProps> = () => {
         {/* MEDIA */}
         <div className="md:max-w-[640px] md:flex-auto">
           <Image
+            unoptimized
             className="h-auto w-[95%] object-contain md:w-full"
             alt=""
             width={imgFeature.width}

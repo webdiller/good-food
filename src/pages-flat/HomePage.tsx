@@ -6,6 +6,7 @@ import FeaturesSection from "../widgets/FeaturesSection"
 import ProcessSection from "../widgets/ProcessSection"
 import FeaturesAltSection from "../widgets/FeaturesAltSection"
 import HowWeCookSection from "../widgets/HowWeCookSection"
+import MapSection from "../widgets/MapSection"
 const ReviewsSection = dynamic(import("../widgets/ReviewsSection"))
 const WelcomeSection = dynamic(import("../widgets/WelcomeSection"))
 
@@ -17,15 +18,18 @@ const HomePage: FC<ComponentProps> = () => {
       <div className="my-2 lg:mt-0">
         <WelcomeSection />
       </div>
-      <div className="my-5.5 container lg:my-8">
+      <div className="container my-5.5 lg:my-8">
         <FeaturesAltSection />
       </div>
-      <div className="my-5.5 container lg:my-10">
+      <div className="container my-5.5 lg:my-10">
         <ProcessSection />
       </div>
-      {/* <div className="my-5.5 container lg:my-10">
+      <div className="mb-6 mt-9 lg:my-15">
         <HowWeCookSection />
-      </div> */}
+      </div>
+      <div className="mb-6 mt-9 lg:my-15">
+        <MapSection />
+      </div>
       <div className="my-3 lg:my-12">
         <ReviewsSection />
       </div>

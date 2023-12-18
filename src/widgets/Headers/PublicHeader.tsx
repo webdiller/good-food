@@ -23,6 +23,7 @@ const PublicHeader: FC<ComponentProps> = () => {
           className="absolute-center lg:static lg:mr-[54px] lg:transform-none"
           href="/">
           <Image
+            unoptimized
             className="lg:w-[117px]"
             alt=""
             width={logo.width}
@@ -94,7 +95,7 @@ const PublicHeader: FC<ComponentProps> = () => {
           </button>
 
           <div className="ml-2 hidden space-x-2 lg:inline-flex">
-            <button className="border-1 rounded-6 inline-flex h-[41px] w-[41px] min-w-[41px] items-end justify-center border-[#EFEFEF]">
+            <button className="inline-flex h-[41px] w-[41px] min-w-[41px] items-end justify-center rounded-6 border-1 border-[#EFEFEF]">
               <svg
                 width="25"
                 height="29"
@@ -111,7 +112,61 @@ const PublicHeader: FC<ComponentProps> = () => {
                 />
               </svg>
             </button>
-            <button className="border-1 rounded-6 inline-flex-center text-grey h-[41px] w-[41px] min-w-[41px] border-[#EFEFEF] text-2sm">RU</button>
+            <button className="inline-flex-center h-[41px] w-[41px] min-w-[41px] rounded-6 border-1 border-[#EFEFEF] text-2sm text-grey">RU</button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={clsx("grid bg-primary transition-all duration-300", {
+          "grid-rows-[0fr]": !activeMenu,
+          "grid-rows-[1fr]": activeMenu,
+        })}>
+        <div className="overflow-hidden">
+          <div className="container flex flex-col py-5">
+            <nav className="mb-8 flex flex-col justify-center space-y-2.5 text-center text-2sm text-white md:mb-0 md:flex-row md:space-x-3 md:space-y-0 lg:space-x-4.5 lg:text-2md">
+              <Link
+                className="font-black"
+                href="/">
+                О нас
+              </Link>
+              <Link href="/">Программа питания</Link>
+              <Link href="/">Доставка</Link>
+
+              <Link
+                className="md:block"
+                href="/">
+                Отзывы
+              </Link>
+              <Link
+                className="md:block"
+                href="/">
+                Производство
+              </Link>
+            </nav>
+
+            <div className="mb-2 inline-flex items-center justify-center space-x-2 md:hidden">
+              <button className="inline-flex h-[30px] w-[30px] min-w-[30px] items-end justify-center rounded-6 border-1 border-[#EFEFEF]">
+                <svg
+                  width="20"
+                  height="22"
+                  viewBox="0 0 20 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.2229 11.8222C13.2987 11.8222 15.7922 9.32874 15.7922 6.2529C15.7922 3.17706 13.2987 0.683594 10.2229 0.683594C7.14703 0.683594 4.65356 3.17706 4.65356 6.2529C4.65356 9.32874 7.14703 11.8222 10.2229 11.8222Z"
+                    fill="#D9D9D9"
+                  />
+                  <path
+                    d="M0.940674 21.4757C0.940674 16.147 5.09909 11.8223 10.2229 11.8223C15.3466 11.8223 19.505 16.147 19.505 21.4757"
+                    fill="#D9D9D9"
+                  />
+                </svg>
+              </button>
+              <button className="inline-flex-center h-[30px] w-[30px] min-w-[30px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey">RU</button>
+            </div>
+
+            <p className="inline-block self-center border-b-1 border-b-secondary pb-[2px] text-medium font-bold text-secondary md:hidden">Написать нам </p>
           </div>
         </div>
       </div>

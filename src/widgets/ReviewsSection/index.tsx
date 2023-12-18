@@ -17,7 +17,7 @@ const ReviewsSection: FC<ComponentProps> = () => {
   return (
     <div className="text-center lg:text-left">
       <div className="container mb-3.5">
-        <p className="lg:text-3lg inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0">Отзывы наших клиентов</p>
+        <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">Отзывы наших клиентов</p>
       </div>
 
       <div className="relative">
@@ -60,6 +60,7 @@ const ReviewsSection: FC<ComponentProps> = () => {
                 key={indx}>
                 <div className="mb-3 flex items-center space-x-2.5 text-[25px] font-bold lg:mb-1.5">
                   <Image
+                    unoptimized
                     width={imgUser.width}
                     height={imgUser.height}
                     src={imgUser.src}
