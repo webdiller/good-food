@@ -1,8 +1,8 @@
 import React from "react"
-import img1 from "@/public/img-process-1.png"
-import img2 from "@/public/img-process-2.png"
-import img3 from "@/public/img-process-3.png"
-import img4 from "@/public/img-process-4.png"
+import img1 from "@/public/img-process-1.svg"
+import img2 from "@/public/img-process-2.svg"
+import img3 from "@/public/img-process-3.svg"
+import img4 from "@/public/img-process-4.svg"
 import Image from "next/image"
 
 const dataItems = [
