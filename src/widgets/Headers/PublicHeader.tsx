@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FC, useState } from "react"
 import MenuLanguage from "../MenuLanguage"
+import MenuUser from "../MenuUser"
 
 interface ComponentProps {}
 
@@ -96,25 +97,7 @@ const PublicHeader: FC<ComponentProps> = () => {
                 />
               </svg>
             </button>
-            <button className="inline-flex h-[30px] w-[30px] min-w-[30px] items-end justify-center rounded-6 border-1 border-[#EFEFEF] md:h-[35px] md:w-[35px] md:min-w-[35px]">
-              <svg
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-                className="h-2 w-2 md:h-3 md:w-3"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12.5 15C16.6421 15 20 11.6421 20 7.5C20 3.35786 16.6421 0 12.5 0C8.35786 0 5 3.35786 5 7.5C5 11.6421 8.35786 15 12.5 15Z"
-                  fill="#D9D9D9"
-                />
-                <path
-                  d="M0 29C0 21.272 5.6 15 12.5 15C19.4 15 25 21.272 25 29"
-                  fill="#D9D9D9"
-                />
-              </svg>
-            </button>
-
+            <MenuUser />
             <MenuLanguage />
           </div>
         </div>
