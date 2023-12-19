@@ -39,16 +39,18 @@ const MenuLanguage = () => {
       as="div"
       className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex-center h-[35px] w-[35px] min-w-[35px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey">{selected.label}</Menu.Button>
+        <Menu.Button className="inline-flex-center h-[30px] w-[30px] min-w-[30px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey md:h-[35px] md:w-[35px] md:min-w-[35px]">
+          {selected.label}
+        </Menu.Button>
       </div>
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
+        enterFrom="transform opacity-0"
+        enterTo="transform opacity-100"
         leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95">
+        leaveFrom="transform opacity-100"
+        leaveTo="transform opacity-0">
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
           <div className="flex flex-col text-left text-black">
             {dataLangs.map((item, indx) => {
