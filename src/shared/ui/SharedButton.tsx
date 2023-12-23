@@ -5,6 +5,7 @@ import { SharedButtonProps } from "../types/SharedButtonProps"
 
 interface ComponentProps extends SharedButtonProps {
   href?: string
+  [x: string]: any
 }
 
 const SharedButton: FC<ComponentProps> = ({ children, classNames, size = "sm", href, variant = "fill-primary", ...rest }) => {
