@@ -26,6 +26,7 @@ import imgBanner4DeskWebp from "@/public/banners/banner-4-desk.webp"
 
 import { StaticImageData } from "next/image"
 import clsx from "clsx"
+import { useTranslations } from "next-intl"
 
 interface ComponentProps {}
 interface BannerProps {
@@ -41,6 +42,7 @@ interface BannerProps {
 }
 
 const WelcomeSection: FC<ComponentProps> = () => {
+  const t = useTranslations("pages.home");
   const [swiperLoaded, setSwiperLoaded] = useState(false)
   const swiperRef = useRef<SwiperRef>()
   const pagination = useRef(null)

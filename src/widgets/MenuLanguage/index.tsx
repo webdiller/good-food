@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react"
+import React, { MouseEvent, useEffect } from "react"
 import { Menu, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import iconFlagGe from "@/public/icon-flag-ge.svg"
@@ -6,41 +6,35 @@ import iconFlagRu from "@/public/icon-flag-ru.svg"
 import iconFlagEn from "@/public/icon-flag-en.svg"
 import clsx from "clsx"
 import Image, { StaticImageData } from "next/image"
+import { useRouter } from "next/router"
+import { sharedi18n } from "@/src/shared/i18n"
 
-interface ItemProps {
+interface langProps {
   label: string
   value: string
   image: StaticImageData
 }
 
-const dataLangs: ItemProps[] = [
-  {
-    label: "EN",
-    value: "en",
-    image: iconFlagEn,
-  },
-  {
-    label: "RU",
-    value: "ru",
-    image: iconFlagRu,
-  },
-  {
-    label: "GE",
-    value: "ge",
-    image: iconFlagGe,
-  },
-]
 
 const MenuLanguage = () => {
-  const [selected, setSelected] = useState<ItemProps>(dataLangs[0])
-  const handler = (value: ItemProps) => (e: MouseEvent<HTMLButtonElement>) => setSelected(value)
+  const router = useRouter();
+  const onLanguageChange = (localeArgs: string) => async (e: React.MouseEvent<HTMLButtonElement>) => {
+    router.push("/", undefined, { locale: localeArgs });
+  };
+
+  const availableLangs: langProps[] = sharedi18n.locales.map(item => ({
+    value: item,
+    label: item.toUpperCase(),
+    image: item === "ru" ? iconFlagRu : item === "ka" ? iconFlagGe : iconFlagEn
+  }))
+
   return (
     <Menu
       as="div"
       className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex-center h-[30px] w-[30px] min-w-[30px] rounded-6 border-1 border-[#EFEFEF] text-base text-grey md:h-[35px] md:w-[35px] md:min-w-[35px]">
-          {selected.label}
+          {router.locale?.toUpperCase()}
         </Menu.Button>
       </div>
       <Transition
@@ -53,12 +47,12 @@ const MenuLanguage = () => {
         leaveTo="transform opacity-0">
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
           <div className="flex flex-col text-left text-black">
-            {dataLangs.map((item, indx) => {
+            {availableLangs.map((item, indx) => {
               return (
                 <Menu.Item key={indx}>
                   {({ active }) => (
                     <button
-                      onClick={handler(item)}
+                      onClick={onLanguageChange(item.value)}
                       className={clsx("flex items-center space-x-0.5 px-1 py-0.5 transition-all duration-300 hover:bg-grey")}>
                       <Image
                         unoptimized

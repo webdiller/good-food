@@ -4,7 +4,7 @@ import clsx from "clsx"
 
 import Image from "next/image"
 import Link from "next/link"
-import { FC, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import MenuLanguage from "../MenuLanguage"
 import MenuUser from "../MenuUser"
 
@@ -13,6 +13,7 @@ interface ComponentProps {}
 const PublicHeader: FC<ComponentProps> = () => {
   const [activeMenu, setactiveMenu] = useState(false)
   const toggleMenu = () => setactiveMenu((prev) => !prev)
+
   return (
     <header className="bg-primary text-[#F5F5F5]">
       <div className="container relative flex min-h-[76px] items-center py-1 lg:min-h-[80px]">
