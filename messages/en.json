@@ -1,4 +1,28 @@
 {
+  "app": {
+    "navigation": {
+      "about": {
+        "title": "",
+        "href": ""
+      },
+      "programm": {
+        "title": "",
+        "href": ""
+      },
+      "delivery": {
+        "title": "",
+        "href": ""
+      },
+      "testimonials": {
+        "title": "",
+        "href": ""
+      },
+      "production": {
+        "title": "",
+        "href": ""
+      }
+    }
+  },
   "pages": {
     "home": {
       "meta": {
@@ -6,112 +30,112 @@
         "description": "GoodFood offers daily healthy meal plans delivered on subscription in Tbilisi. Home delivery of food the next morning. Order your meal plan now!"
       },
       "write_to_us": {
-        "en": "Write to Us"
+        "title": "Write to Us"
       },
       "about_us": {
-        "en": "About Us"
+        "title": "About Us"
       },
       "meal_plan": {
-        "en": "Meal Plan"
+        "title": "Meal Plan"
       },
       "delivery": {
-        "en": "Delivery"
+        "title": "Delivery"
       },
       "feedback": {
-        "en": "Feedback"
+        "title": "Feedback"
       },
       "production": {
-        "en": "Production"
+        "title": "Production"
       },
       "place_order": {
-        "en": "Place Order"
+        "title": "Place Order"
       },
       "account": {
-        "en": "Account"
+        "title": "Account"
       },
       "logout": {
-        "en": "Logout"
+        "title": "Logout"
       },
       "full_day_meal_delivery": {
-        "en": "All-Day Meal Delivery"
+        "title": "All-Day Meal Delivery"
       },
       "order_your_menu": {
-        "en": "Order Your Menu. Know what you get. Change meals for next day."
+        "title": "Order Your Menu. Know what you get. Change meals for next day."
       },
       "bring_a_friend_offer": {
-        "en": "1+1=0. Bring a friend and get +1 free day of food."
+        "title": "1+1=0. Bring a friend and get +1 free day of food."
       },
       "start_winter_with_healthy_eating": {
-        "en": "Start Winter with Healthy Eating"
+        "title": "Start Winter with Healthy Eating"
       },
       "promo_code": {
-        "en": "Promo Code"
+        "title": "Promo Code"
       },
       "first_order_discount": {
-        "en": "10% extra discount on first order until 01.02.24"
+        "title": "10% extra discount on first order until 01.02.24"
       },
       "convenience_of_delivery": {
-        "en": "Convenient Delivery"
+        "title": "Convenient Delivery"
       },
       "food_at_your_door_next_morning": {
-        "en": "Next Morning Food at Your Door"
+        "title": "Next Morning Food at Your Door"
       },
       "reliable_couriers": {
-        "en": "Reliable Couriers"
+        "title": "Reliable Couriers"
       },
       "always_within_an_hour": {
-        "en": "Always Within an Hour"
+        "title": "Always Within an Hour"
       },
       "customer_focused_service": {
-        "en": "Customer-Focused Service"
+        "title": "Customer-Focused Service"
       },
       "we_consider_your_wishes": {
-        "en": "We Consider Your Wishes"
+        "title": "We Consider Your Wishes"
       },
       "fresh_products": {
-        "en": "Fresh Products"
+        "title": "Fresh Products"
       },
       "natural_farm_products": {
-        "en": "Natural Farm Products"
+        "title": "Natural Farm Products"
       },
       "process": {
-        "en": "Process"
+        "title": "Process"
       },
       "order_and_confirm": {
-        "en": "1. Place Order, 2. Confirmation by Manager, 3. Morning Delivery, 4. Achieve Your Goals"
+        "title": "1. Place Order, 2. Confirmation by Manager, 3. Morning Delivery, 4. Achieve Your Goals"
       },
       "where_we_cook": {
-        "en": "Where We Cook"
+        "title": "Where We Cook"
       },
       "our_kitchens": {
-        "en": "Our Kitchen: Cleanliness and Food Safety"
+        "title": "Our Kitchen: Cleanliness and Food Safety"
       },
       "industrial_kitchen": {
-        "en": "Industrial Kitchen in Tbilisi Center. 200kg food prepared daily. Fresh due to daily supplies, strict hygiene standards."
+        "title": "Industrial Kitchen in Tbilisi Center. 200kg food prepared daily. Fresh due to daily supplies, strict hygiene standards."
       },
       "delivery_map": {
-        "en": "Delivery Map"
+        "title": "Delivery Map"
       },
       "free_delivery_tbilisi": {
-        "en": "Free Delivery in Tbilisi"
+        "title": "Free Delivery in Tbilisi"
       },
       "our_advantages": {
-        "en": "Our Advantages"
+        "title": "Our Advantages"
       },
       "our_service_advantages": {
-        "en": "Delicious Food, Fresh Variety, Next Morning Doorstep Delivery, Prepared with Love"
+        "title": "Delicious Food, Fresh Variety, Next Morning Doorstep Delivery, Prepared with Love"
       },
       "about_goodfood": {
-        "en": "About GoodFood: We prepare and deliver balanced meal plans to your home. Our aim is to provide tasty and healthy food designed to meet our client's needs for the whole day, week, or month. We create a diverse menu of complete breakfasts, lunches, and dinners to help our clients achieve their goals."
+        "title": "About GoodFood: We prepare and deliver balanced meal plans to your home. Our aim is to provide tasty and healthy food designed to meet our client's needs for the whole day, week, or month. We create a diverse menu of complete breakfasts, lunches, and dinners to help our clients achieve their goals."
       },
       "where_to_buy": {
-        "en": "Where to Buy: Purchase Good Food's ready-to-eat meal plans currently available in Tbilisi and surrounding areas. Delivered by our company the next day."
+        "title": "Where to Buy: Purchase Good Food's ready-to-eat meal plans currently available in Tbilisi and surrounding areas. Delivered by our company the next day."
       },
       "order_and_save_time": {
-        "en": "Place Your Order and Save Up to 20 Hours a Week!"
+        "title": "Place Your Order and Save Up to 20 Hours a Week!"
       },
       "make_order": {
-        "en": "Make an Order"
+        "title": "Make an Order"
       }
     }
   }

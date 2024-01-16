@@ -149,7 +149,7 @@ const WelcomeSection: FC<ComponentProps> = () => {
                 />
               </picture>
               <div className="absolute bottom-3 flex justify-center lg:bottom-[20px] lg:left-[10vw] lg:pb-5 xl:left-[14vw]">
-                <SharedButton style={{backgroundColor: item.btnColor, color: '#012421'}} classNames={clsx(`w-auto lg:min-h-[78px] lg:max-h-[78px] lg:px-[45px] lg:text-[30px]`)}>Оформить заказ</SharedButton>
+                <SharedButton style={{backgroundColor: item.btnColor, color: '#012421'}} classNames={clsx(`w-auto lg:min-h-[78px] lg:max-h-[78px] lg:px-[45px] lg:text-[30px]`)}>{t("place_order.title")}</SharedButton>
               </div>
             </SwiperSlide>
           )

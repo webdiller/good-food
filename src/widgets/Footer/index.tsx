@@ -31,6 +31,7 @@ const dataNav = [
 ]
 
 const Footer: FC<ComponentProps> = () => {
+  const year = new Date().getFullYear()
   return (
     <footer className="pt-8.5 pb-2.5 lg:bg-[#FAFAFA] lg:py-6.5">
       <div className="container flex flex-col items-center text-center">
@@ -63,7 +64,7 @@ const Footer: FC<ComponentProps> = () => {
         </div>
       </div>
 
-      <div className="color-[#182927] text-center text-medium lg:text-2md">good.food.ge © 2023</div>
+      <div className="color-[#182927] text-center text-medium lg:text-2md">good.food.ge © {year}</div>
     </footer>
   )
 }
