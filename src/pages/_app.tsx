@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
 import React, { ReactElement, ReactNode } from "react"
-import { NextIntlClientProvider } from 'next-intl';
-import { useRouter } from "next/router";
+import { NextIntlClientProvider } from "next-intl"
+import { useRouter } from "next/router"
 import Script from "next/script"
 import { fontNotoSans, fontNotoSansDisplay, fontRaleway } from "@/src/shared/styles/fonts"
 import "swiper/css/navigation"
@@ -19,14 +19,13 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const router = useRouter();
+  const router = useRouter()
   const getLayout = Component.getLayout ?? ((page) => page)
   return getLayout(
     <NextIntlClientProvider
       locale={router.locale}
       timeZone="Europe/Moscow"
-      messages={pageProps.messages}
-    >
+      messages={pageProps.messages}>
       <style
         jsx
         global>
@@ -73,6 +72,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         hrefLang="x-default"
         rel="alternate"
       />
-    </NextIntlClientProvider>
+    </NextIntlClientProvider>,
   )
 }

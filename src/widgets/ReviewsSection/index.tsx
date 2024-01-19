@@ -16,7 +16,9 @@ const ReviewsSection: FC<ComponentProps> = () => {
   const slideNext = useRef(null)
 
   const t = useTranslations("pages.home")
+  const tApp = useTranslations("app")
   const title = t("sectionReviews.title")
+  const more_details = tApp("actions.more_details")
 
   return (
     <div className="text-center lg:text-left">
@@ -83,7 +85,7 @@ const ReviewsSection: FC<ComponentProps> = () => {
                   variant="fill-secondary"
                   size="default"
                   classNames="min-h-[36px] max-h-[36px] lg:min-h-[48px] lg:max-h-[48px] lg:text-[22px] text-white">
-                  Подробнее
+                  {more_details}
                 </SharedButton>
               </SwiperSlide>
             )

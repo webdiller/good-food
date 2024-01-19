@@ -4,13 +4,25 @@ import clsx from "clsx"
 
 import Image from "next/image"
 import Link from "next/link"
-import { FC, useEffect, useState } from "react"
+import { FC, useState } from "react"
 import MenuLanguage from "../MenuLanguage"
 import MenuUser from "../MenuUser"
+import { useTranslations } from "next-intl"
 
 interface ComponentProps {}
 
 const PublicHeader: FC<ComponentProps> = () => {
+  const t = useTranslations("app")
+
+  const write_to_us = t("actions.write_to_us")
+  const request_order = t("actions.request_order")
+
+  const navItemAbout = t("navigation.about.title")
+  const navItemProgramm = t("navigation.programm.title")
+  const navItemDelivery = t("navigation.delivery.title")
+  const navItemTestimonials = t("navigation.testimonials.title")
+  const navItemProduction = t("navigation.production.title")
+
   const [activeMenu, setactiveMenu] = useState(false)
   const toggleMenu = () => setactiveMenu((prev) => !prev)
 
@@ -39,7 +51,7 @@ const PublicHeader: FC<ComponentProps> = () => {
         <Link
           className="hidden text-2sm font-bold text-secondary underline underline-offset-4 hover:no-underline lg:inline-block"
           href="/">
-          Написать нам
+          {write_to_us}
         </Link>
 
         <div className="ml-auto inline-flex items-center">
@@ -47,7 +59,7 @@ const PublicHeader: FC<ComponentProps> = () => {
             variant="fill-secondary"
             size="default"
             classNames="rounded text-base mr-[55px] lg:inline-flex hidden">
-            Оформить заказ
+            {request_order}
           </SharedButton>
 
           <div className="ml-2 inline-flex items-center space-x-1 md:space-x-2">
@@ -115,23 +127,23 @@ const PublicHeader: FC<ComponentProps> = () => {
               <Link
                 className="font-black"
                 href="/">
-                О нас
+                {navItemAbout}
               </Link>
-              <Link href="/">Программа питания</Link>
-              <Link href="/">Доставка</Link>
+              <Link href="/">{navItemProgramm}</Link>
+              <Link href="/">{navItemDelivery}</Link>
 
               <Link
                 className="md:block"
                 href="/">
-                Отзывы
+                {navItemTestimonials}
               </Link>
               <Link
                 className="md:block"
                 href="/">
-                Производство
+                {navItemProduction}
               </Link>
             </nav>
-            <p className="inline-block self-center border-b-1 border-b-secondary pb-[2px] text-medium font-bold text-secondary md:hidden">Написать нам </p>
+            <p className="inline-block self-center border-b-1 border-b-secondary pb-[2px] text-medium font-bold text-secondary md:hidden">{write_to_us}</p>
           </div>
         </div>
       </div>

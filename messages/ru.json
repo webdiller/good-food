@@ -5,7 +5,9 @@
       "make_order": "Сделать заказ",
       "choose_ration": "Выбрать рацион",
       "write_to_us": "Написать нам",
-      "more_details": "Подробнее"
+      "more_details": "Подробнее",
+      "account": "Личный кабинет",
+      "logout": "Выйти"
     },
     "navigation": {
       "about": {

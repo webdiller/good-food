@@ -6,6 +6,8 @@ import { NextSeo } from "next-seo"
 import { GetStaticPropsContext } from "next"
 import { useTranslations } from "next-intl"
 import { sharedi18n } from "../shared/i18n"
+import PublicHeader from "@/src/widgets/Headers/PublicHeader"
+import Footer from "@/src/widgets/Footer"
 
 interface PageProps {
   messages: any
@@ -20,7 +22,9 @@ const Page: NextPageWithLayout<PageProps> = ({ messages, currentLocale }) => {
         title={t("title")}
         description={t("description")}
       />
+      <PublicHeader />
       <HomePage currentLocale={currentLocale} />
+      <Footer />
     </>
   )
 }

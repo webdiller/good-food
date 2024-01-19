@@ -3,9 +3,13 @@ import { Menu, Transition } from "@headlessui/react"
 import { Fragment } from "react"
 
 import clsx from "clsx"
+import { useTranslations } from "next-intl"
 
 const MenuUser = () => {
-  // const handler = (value: ItemProps) => (e: MouseEvent<HTMLButtonElement>) => setSelected(value)
+  const t = useTranslations("app")
+
+  const account = t("actions.account")
+  const logout = t("actions.logout")
   return (
     <Menu
       as="div"
@@ -36,8 +40,8 @@ const MenuUser = () => {
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100"
         leaveTo="transform opacity-0">
-        <Menu.Items className="absolute right-0 z-10 mt-2 md:mt-1.5 w-auto origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
-          <div className="flex flex-col whitespace-nowrap text-left text-black divide-y divide-gray-100">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-auto origin-top-right divide-y divide-gray-100 overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none md:mt-1.5">
+          <div className="flex flex-col divide-y divide-gray-100 whitespace-nowrap text-left text-black">
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -56,7 +60,7 @@ const MenuUser = () => {
                       d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                     />
                   </svg>
-                  <span>Личный кабинет</span>
+                  <span>{account}</span>
                 </button>
               )}
             </Menu.Item>
@@ -80,7 +84,7 @@ const MenuUser = () => {
                     />
                   </svg>
 
-                  <span>Выйти</span>
+                  <span>{logout}</span>
                 </button>
               )}
             </Menu.Item>
