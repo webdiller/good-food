@@ -1,25 +1,43 @@
 {
   "app": {
+    "actions": {
+      "request_order": "Place Order",
+      "make_order": "Make an Order",
+      "choose_ration": "Выбрать рацион",
+      "write_to_us": "Write to Us"
+    },
     "navigation": {
       "about": {
-        "title": "",
-        "href": ""
+        "title": "About us"
       },
       "programm": {
-        "title": "",
-        "href": ""
+        "title": "Meal Plan"
       },
       "delivery": {
-        "title": "",
-        "href": ""
+        "title": "Delivery"
       },
       "testimonials": {
-        "title": "",
-        "href": ""
+        "title": "Feedback"
       },
       "production": {
-        "title": "",
-        "href": ""
+        "title": "Production"
+      }
+    },
+    "navigation2": {
+      "contact": {
+        "title": "Contact us"
+      },
+      "faq": {
+        "title": "Faq"
+      },
+      "terms": {
+        "title": "Terms of Use"
+      },
+      "order": {
+        "title": "Order"
+      },
+      "privacy": {
+        "title": "Политика конфиденциальности"
       }
     }
   },
@@ -28,6 +46,67 @@
       "meta": {
         "title": "GoodFood | Meal Plan Delivery in Tbilisi, Georgia",
         "description": "GoodFood offers daily healthy meal plans delivered on subscription in Tbilisi. Home delivery of food the next morning. Order your meal plan now!"
+      },
+      "sectionFeatures": {
+        "item1": {
+          "title": "Convenient Delivery",
+          "description": "Next Morning Food at Your Door"
+        },
+        "item2": {
+          "title": "Reliable Couriers",
+          "description": "Always Within an Hour"
+        },
+        "item3": {
+          "title": "Customer-Focused Service",
+          "description": "We Consider Your Wishes"
+        },
+        "item4": {
+          "title": "Fresh Products",
+          "description": "Natural Farm Products"
+        }
+      },
+      "sectionProcess": {
+        "item1": {
+          "title": "1. Place Order"
+        },
+        "item2": {
+          "title": "2. Confirmation by Manager"
+        },
+        "item3": {
+          "title": "3. Morning Delivery"
+        },
+        "item4": {
+          "title": "4. Achieve Your Goals"
+        }
+      },
+      "sectionWhereWeCook": {
+        "title": "Where We Cook",
+        "subtitle": "Our Kitchen: Cleanliness and Food Safety",
+        "description1": "Industrial Kitchen in Tbilisi Center. 200kg food prepared daily. Fresh due to daily supplies, strict hygiene standards.",
+        "description2": "You will be impressed by how we cook!"
+      },
+      "sectionLocation": {
+        "title": "Delivery Map",
+        "subtitle": "Free Delivery in Tbilisi",
+        "description1": "Our Advantages:",
+        "description2": "– Own delivery service - Express delivery: we will deliver within the chosen time frame - In Tbilisi and +20km - If ordered by 12:00, we will deliver it tomorrow!"
+      },
+      "sectionReviews": {
+        "title": "Customer Reviews"
+      },
+      "sectionFeatures2": {
+        "title": "Our Advantages",
+        "item1": "Individual approach",
+        "item2": "Fresh farm products",
+        "item3": "Next-morning delivery",
+        "item4": "We cook and package with love."
+      },
+      "sectionFooter": {
+        "aboutTitle": "About Us",
+        "aboutDescription": "About GoodFood: We prepare and deliver balanced meal plans to your home. Our aim is to provide tasty and healthy food designed to meet our client's needs for the whole day, week, or month. We create a diverse menu of complete breakfasts, lunches, and dinners to help our clients achieve their goals.",
+        "whereToByTitle": "Where to buy",
+        "where_to_buy_description": "Purchase <strong>Good Food's</strong> ready-to-eat meal plans currently available in Tbilisi and surrounding areas. Delivered by our company the next day.",
+        "where_to_buy_description2": "Place Your Order and Save Up to 20 Hours a Week!"
       },
       "write_to_us": {
         "title": "Write to Us"
