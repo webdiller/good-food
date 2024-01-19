@@ -5,6 +5,7 @@ import { type Swiper as SwiperRef } from "swiper"
 import { Navigation } from "swiper/modules"
 import imgUser from "@/public/img-user.jpg"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 interface ComponentProps {}
 
@@ -14,10 +15,13 @@ const ReviewsSection: FC<ComponentProps> = () => {
   const slidePrev = useRef(null)
   const slideNext = useRef(null)
 
+  const t = useTranslations("pages.home")
+  const title = t("sectionReviews.title")
+
   return (
     <div className="text-center lg:text-left">
-      <div className="font-raleway container mb-3.5">
-        <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">Отзывы наших клиентов</p>
+      <div className="container mb-3.5 font-raleway">
+        <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-3lg">{title}</p>
       </div>
 
       <div className="relative">

@@ -3,8 +3,9 @@
     "actions": {
       "request_order": "Place Order",
       "make_order": "Make an Order",
-      "choose_ration": "Выбрать рацион",
-      "write_to_us": "Write to Us"
+      "choose_ration": "Choose a diet",
+      "write_to_us": "Write to Us",
+      "more_details": "More details"
     },
     "navigation": {
       "about": {
@@ -48,6 +49,7 @@
         "description": "GoodFood offers daily healthy meal plans delivered on subscription in Tbilisi. Home delivery of food the next morning. Order your meal plan now!"
       },
       "sectionFeatures": {
+        "title": "GOOD FOOD — IS",
         "item1": {
           "title": "Convenient Delivery",
           "description": "Next Morning Food at Your Door"
@@ -66,6 +68,7 @@
         }
       },
       "sectionProcess": {
+        "title": "Process",
         "item1": {
           "title": "1. Place Order"
         },

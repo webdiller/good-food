@@ -4,36 +4,43 @@ import img2 from "@/public/img-feature-2.svg"
 import img3 from "@/public/img-feature-3.svg"
 import img4 from "@/public/img-feature-4.svg"
 import Image from "next/image"
+import { sharedi18n } from "@/src/shared/i18n"
+import { useTranslations } from "next-intl"
 
-const dataItems = [
-  {
-    title: "Удобство доставки",
-    descrption: "Еда на следующее утро у вашей двери",
-    img: img1,
-  },
-  {
-    title: "Надежные курьеры",
-    descrption: "Доставка всегда в интервал часа",
-    img: img2,
-  },
-  {
-    title: "Сервис, ориентированный на вас",
-    descrption: "Мы слушаем ваши пожелания и стараемся их исполнить",
-    img: img3,
-  },
-  {
-    title: "Свежесть продуктов",
-    descrption: "Только натуральные фермерские продукты",
-    img: img4,
-  },
-]
+interface ComponentProps {
+  currentLocale: (typeof sharedi18n.locales)[number]
+}
 
-const FeaturesAltSection = () => {
+const FeaturesAltSection = ({ currentLocale }: ComponentProps) => {
+  const t = useTranslations("pages.home")
+  const features = [
+    {
+      title: t("sectionFeatures.item1.title"),
+      description: t("sectionFeatures.item1.description"),
+      img: img1,
+    },
+    {
+      title: t("sectionFeatures.item2.title"),
+      description: t("sectionFeatures.item2.description"),
+      img: img2,
+    },
+    {
+      title: t("sectionFeatures.item3.title"),
+      description: t("sectionFeatures.item3.description"),
+      img: img3,
+    },
+    {
+      title: t("sectionFeatures.item4.title"),
+      description: t("sectionFeatures.item4.description"),
+      img: img4,
+    },
+  ]
+
   return (
-    <div className="text-center text-black font-raleway">
-      <p className="mb-3 inline-block text-3 font-black uppercase lg:mb-6 lg:text-4sm">Good Food — это</p>
+    <div className="text-center font-raleway text-black">
+      <p className="mb-3 inline-block text-3 font-black uppercase lg:mb-6 lg:text-4sm">{t("sectionFeatures.title")}</p>
       <div className="mx-auto max-w-[320px] space-y-3 text-left lg:flex lg:max-w-[1400px] lg:justify-between lg:space-x-3 lg:space-y-0 lg:text-center xl:grid xl:grid-cols-4 xl:gap-3 xl:space-x-0">
-        {dataItems.map((item, indx) => {
+        {features.map((item, indx) => {
           return (
             <div
               className="flex items-center lg:flex-col lg:space-x-0"
@@ -48,7 +55,7 @@ const FeaturesAltSection = () => {
               />
               <div className="space-y-1.5">
                 <p className="text-medium font-black xl:text-2md">{item.title}</p>
-                <p className="text-base lg:text-2sm">{item.descrption}</p>
+                <p className="text-base lg:text-2sm">{item.description}</p>
               </div>
             </div>
           )

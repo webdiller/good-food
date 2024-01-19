@@ -4,30 +4,37 @@ import img2 from "@/public/img-process-2.svg"
 import img3 from "@/public/img-process-3.svg"
 import img4 from "@/public/img-process-4.svg"
 import Image from "next/image"
+import { sharedi18n } from "@/src/shared/i18n"
+import { useTranslations } from "next-intl"
 
-const dataItems = [
-  {
-    title: "Оформляете заказ",
-    img: img1,
-  },
-  {
-    title: "Менеджер подтверждает заказ",
-    img: img2,
-  },
-  {
-    title: "Доставляем еду по утрам",
-    img: img3,
-  },
-  {
-    title: "Достигаете своей цели",
-    img: img4,
-  },
-]
+interface ComponentProps {
+  currentLocale: (typeof sharedi18n.locales)[number]
+}
 
-const ProcessSection = () => {
+const ProcessSection = ({ currentLocale }: ComponentProps) => {
+  const t = useTranslations("pages.home")
+  const dataItems = [
+    {
+      title: t("sectionProcess.item1.title"),
+      img: img1,
+    },
+    {
+      title: t("sectionProcess.item2.title"),
+      img: img2,
+    },
+    {
+      title: t("sectionProcess.item3.title"),
+      img: img3,
+    },
+    {
+      title: t("sectionProcess.item4.title"),
+      img: img4,
+    },
+  ]
+
   return (
-    <div className="font-raleway space-y-5 text-center text-black lg:space-y-7">
-      <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-4sm">Процесс</p>
+    <div className="space-y-5 text-center font-raleway text-black lg:space-y-7">
+      <p className="inline-block border-b-3 border-b-secondary text-2lg font-black lg:border-0 lg:text-4sm">{t("sectionProcess.title")}</p>
       <div className="mx-auto max-w-[270px] space-y-4.5 text-left lg:flex lg:max-w-[1200px] lg:justify-between lg:space-y-0 lg:text-center">
         {dataItems.map((item, indx) => {
           return (
@@ -61,7 +68,7 @@ const ProcessSection = () => {
               />
               <div className="lg:max-w-[260px]">
                 <p className="text-base font-black lg:text-2md">
-                  {indx + 1}. {item.title}
+                  {item.title}
                 </p>
               </div>
             </div>

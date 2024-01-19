@@ -5,10 +5,11 @@ import DefaultLayout from "@/src/widgets/Layouts/DefaultLayout"
 import { NextSeo } from "next-seo"
 import { GetStaticPropsContext } from "next"
 import { useTranslations } from "next-intl"
+import { sharedi18n } from "../shared/i18n"
 
 interface PageProps {
   messages: any
-  currentLocale: string
+  currentLocale: typeof sharedi18n.locales[number]
 }
 
 const Page: NextPageWithLayout<PageProps> = ({ messages, currentLocale }) => {
@@ -19,7 +20,7 @@ const Page: NextPageWithLayout<PageProps> = ({ messages, currentLocale }) => {
         title={t("title")}
         description={t("description")}
       />
-      <HomePage />
+      <HomePage currentLocale={currentLocale} />
     </>
   )
 }

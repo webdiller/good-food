@@ -27,7 +27,6 @@ const MenuLanguage = () => {
     label: item.toUpperCase(),
     image: item === "ru" ? iconFlagRu : item === "ka" ? iconFlagGe : iconFlagEn
   }))
-
   return (
     <Menu
       as="div"
