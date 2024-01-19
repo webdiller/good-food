@@ -8,6 +8,7 @@ import { FC, useState } from "react"
 import MenuLanguage from "../MenuLanguage"
 import MenuUser from "../MenuUser"
 import { useTranslations } from "next-intl"
+import { sharedi18n } from "@/src/shared/i18n"
 
 interface ComponentProps {}
 

@@ -8,6 +8,7 @@ import clsx from "clsx"
 import Image, { StaticImageData } from "next/image"
 import { useRouter } from "next/router"
 import { sharedi18n } from "@/src/shared/i18n"
+import { switchLangWidget } from "@/src/shared/functions/switchLangWidget"
 
 interface langProps {
   label: string
@@ -20,6 +21,7 @@ const MenuLanguage = () => {
   const router = useRouter();
   const onLanguageChange = (localeArgs: string) => async (e: React.MouseEvent<HTMLButtonElement>) => {
     router.push("/", undefined, { locale: localeArgs });
+    switchLangWidget(localeArgs.toUpperCase())
   };
 
   const availableLangs: langProps[] = sharedi18n.locales.map(item => ({
