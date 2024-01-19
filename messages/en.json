@@ -1,5 +1,8 @@
 {
   "app": {
+    "global": {
+      "city": "Tbilisi"
+    },
     "actions": {
       "request_order": "Place Order",
       "make_order": "Make an Order",

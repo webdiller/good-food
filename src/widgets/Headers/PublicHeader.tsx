@@ -14,6 +14,7 @@ interface ComponentProps {}
 const PublicHeader: FC<ComponentProps> = () => {
   const t = useTranslations("app")
 
+  const city = t("global.city")
   const write_to_us = t("actions.write_to_us")
   const request_order = t("actions.request_order")
 
@@ -32,7 +33,7 @@ const PublicHeader: FC<ComponentProps> = () => {
         <Link
           className="lg:hidden"
           href="/">
-          Тбилиси
+          {city}
         </Link>
 
         <Link

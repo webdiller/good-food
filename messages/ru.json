@@ -1,5 +1,8 @@
 {
   "app": {
+    "global": {
+      "city": "Тбилиси"
+    },
     "actions": {
       "request_order": "Оформить заказ",
       "make_order": "Сделать заказ",
