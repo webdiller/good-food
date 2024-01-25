@@ -37,18 +37,40 @@ const Footer: FC<ComponentProps> = () => {
     },
   ]
 
+  
+
+  const socialNav = [
+    {
+      label: "FB",
+      href: "http://facebook.com/goodfood.tbilisi",
+    },
+    {
+      label: "IG",
+      href: "https://www.instagram.com/goodfoodge/",
+    },
+    {
+      label: "TG",
+      href: "https://t.me/goodfoodge",
+    },
+    {
+      label: "WA",
+      href: "http://wa.me/995599885710",
+    }
+  ]
+
   return (
     <footer className="pb-2.5 pt-8.5 lg:bg-[#FAFAFA] lg:py-6.5">
       <div className="container flex flex-col items-center text-center">
         {/* SOCIALS */}
         <div className="mx-auto mb-4.5 flex w-full max-w-[300px] justify-between gap-1 lg:max-w-[540px]">
-          {Array.from({ length: 4 }).map((item, indx) => {
+          {socialNav.map((item, indx) => {
             return (
               <Link
-                href="/"
+              target="_blank"
+                href={item.href}
                 className="inline-flex h-[57px] w-[57px] min-w-[57px] items-center justify-center rounded-12 bg-secondary font-raleway text-medium font-black text-primary lg:h-[75px] lg:w-[75px] lg:min-w-[75px] lg:text-2md"
                 key={indx}>
-                FB
+                {item.label}
               </Link>
             )
           })}

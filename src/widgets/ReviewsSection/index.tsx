@@ -20,6 +20,37 @@ const ReviewsSection: FC<ComponentProps> = () => {
   const title = t("sectionReviews.title")
   const more_details = tApp("actions.more_details")
 
+  
+interface Review {
+  name: string;
+  text: string;
+  imgSrc: string;
+}
+
+const reviews: Review[] = [
+  {
+    name: "Арина",
+    text: "Похудела на 5 кг с рационом 1500ккал! Качество блюд: 10. Разнообразие: 10. Супы у вас просто отличные!",
+    imgSrc: "/img-user.jpg"
+  },
+  {
+    name: "Илья",
+    text: "10 баллов, мне все нравится. Ваши доставщики, они как эльфы, пакеты с едой оставляли у двери.",
+    imgSrc: "/img-user.jpg"
+  },
+  {
+    name: "Саша",
+    text: "14 дней на Good Food – привёл себя в форму. Я в IT работаю, постоянно дела, а тут сервис очень выручает",
+    imgSrc: "/img-user.jpg"
+  },
+  {
+    name: "Илья",
+    text: "В связи с активным графиком работы очень тяжело готовить. И ваша еда спасает",
+    imgSrc: "/img-user.jpg"
+  },
+  // Add more reviews here
+];
+
   return (
     <div className="text-center lg:text-left">
       <div className="container mb-3.5 font-raleway">
@@ -59,7 +90,7 @@ const ReviewsSection: FC<ComponentProps> = () => {
               slidesOffsetBefore: 40,
             },
           }}>
-          {Array.from({ length: 5 }).map((item, indx) => {
+          {reviews.map((item, indx) => {
             return (
               <SwiperSlide
                 className="rounded-20 bg-[#EFEFEF] p-2"
@@ -73,12 +104,11 @@ const ReviewsSection: FC<ComponentProps> = () => {
                     alt=""
                     className="h-[90px] w-[90px] min-w-[90px] rounded-full"
                   />
-                  <p>Анна</p>
+                  <p>{item.name}</p>
                 </div>
 
                 <p className="mb-3.5 font-light lg:mb-2.5">
-                  Мы привыкли, что наше здоровье – это сфера компетенции исключительно врачей. Любое недомогание или сбой служит для нас сигналом, что пора начинать лечение таблетками и сиропами. Но
-                  многие при этом…
+                  {item.text}
                 </p>
 
                 <SharedButton

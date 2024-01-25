@@ -24,7 +24,7 @@ const MapSection: FC<ComponentProps> = () => {
         <iframe
           width="100%"
           height="100%"
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tbilisi+(Good%20Food)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          src="https://www.google.com/maps/d/embed?mid=1Tk202JDC12JUXi6gwNGCEWoM7g3N4go&ehbc=2E312F&noprof=1&hl=ru"/>
       </div>
 
       <div className="mx-auto mt-1.5 max-w-[92%] px-2.5 py-2 md:mt-0 md:max-w-none md:flex-1 md:bg-transparent md:p-0 lg:flex-auto">
