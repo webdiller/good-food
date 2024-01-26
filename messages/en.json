@@ -51,7 +51,9 @@
     "home": {
       "meta": {
         "title": "GoodFood | Meal Plan Delivery in Tbilisi, Georgia",
-        "description": "GoodFood offers daily healthy meal plans delivered on subscription in Tbilisi. Home delivery of food the next morning. Order your meal plan now!"
+        "description": "GoodFood offers daily healthy meal plans delivered on subscription in Tbilisi. Home delivery of food the next morning. Order your meal plan now!",
+        "ogImageTitle": "all day meal delivery",
+        "ogImageDescription": "all day meal delivery"
       },
       "sectionFeatures": {
         "title": "GOOD FOOD IS",
