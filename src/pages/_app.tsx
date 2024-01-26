@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       const currentLocale = pageProps.currentLocale as string
       switchLangWidget(currentLocale)
     } catch (error) {
-      
+      console.log(error);
     }
   }, [pageProps])
 
