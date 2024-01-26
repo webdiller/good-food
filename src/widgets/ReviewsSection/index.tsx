@@ -93,7 +93,7 @@ const reviews: Review[] = [
           {reviews.map((item, indx) => {
             return (
               <SwiperSlide
-                className="rounded-20 bg-[#EFEFEF] p-2"
+                className="rounded-20 bg-[#EFEFEF] p-2 h-auto flex flex-col"
                 key={indx}>
                 <div className="mb-3 flex items-center space-x-2.5 text-[25px] font-bold lg:mb-1.5">
                   <Image
@@ -114,7 +114,7 @@ const reviews: Review[] = [
                 <SharedButton
                   variant="fill-secondary"
                   size="default"
-                  classNames="min-h-[36px] max-h-[36px] lg:min-h-[48px] lg:max-h-[48px] lg:text-[22px] text-white">
+                  classNames="min-h-[36px] mt-auto mr-auto max-h-[36px] lg:min-h-[48px] lg:max-h-[48px] lg:text-[22px] text-white">
                   {more_details}
                 </SharedButton>
               </SwiperSlide>
