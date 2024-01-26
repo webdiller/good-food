@@ -1,15 +1,15 @@
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
-import React, { ReactElement, ReactNode, useEffect } from "react"
+import React, { ReactElement, ReactNode, useEffect, useState } from "react"
 import { NextIntlClientProvider } from "next-intl"
 import { useRouter } from "next/router"
 import Script from "next/script"
+import { switchLangWidget } from "../shared/functions/switchLangWidget"
 import { fontNotoSans, fontNotoSansDisplay, fontRaleway } from "@/src/shared/styles/fonts"
 import "swiper/css/navigation"
 import "swiper/css/autoplay"
 import "swiper/css/bundle"
 import "@/src/shared/styles/globals.scss"
-import { switchLangWidget } from "../shared/functions/switchLangWidget"
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -23,17 +23,18 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter()
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  useEffect(()=>{
-    if (window && typeof window !== "undefined") {
+  const [loadedWebComponent, loadedWebComponentSet] = useState(false)
+
+  useEffect(() => {
+    if (window && typeof window !== "undefined" && loadedWebComponent) {
       try {
         const currentLocale = pageProps.currentLocale as string
         switchLangWidget(currentLocale)
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     }
-    
-  }, [pageProps])
+  }, [pageProps, loadedWebComponent])
 
   return getLayout(
     <NextIntlClientProvider
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       </style>
       <Component {...pageProps} />
       <Script
+        onLoad={(e) => loadedWebComponentSet(true)}
         type="module"
         id="cleverfoodWebComponent"
         src="./cleverfood.es.js"
