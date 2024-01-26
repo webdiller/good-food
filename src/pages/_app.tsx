@@ -26,7 +26,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   useEffect(()=>{
     if (typeof window !== "undefined") {
       const currentLocale = pageProps.currentLocale as string
-      switchLangWidget(currentLocale)
+      try {
+        switchLangWidget(currentLocale)
+      } catch (error) {
+        
+      }
     }
   }, [])
 
