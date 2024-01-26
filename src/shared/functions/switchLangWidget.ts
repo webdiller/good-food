@@ -1,3 +1,6 @@
 export const switchLangWidget = (locale: string) => {
-  if (window && typeof window !== "undefined") window.CleverFood.setLanguage(locale)
+  let parseLocale = locale;
+  if (parseLocale.toLowerCase() === "ka") parseLocale = "GE"
+  console.log(parseLocale);
+  if (window && typeof window !== "undefined") window.CleverFood.setLanguage(parseLocale)
 }

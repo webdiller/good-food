@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app"
 import { NextPage } from "next"
-import React, { ReactElement, ReactNode } from "react"
+import React, { ReactElement, ReactNode, useEffect } from "react"
 import { NextIntlClientProvider } from "next-intl"
 import { useRouter } from "next/router"
 import Script from "next/script"
@@ -9,6 +9,7 @@ import "swiper/css/navigation"
 import "swiper/css/autoplay"
 import "swiper/css/bundle"
 import "@/src/shared/styles/globals.scss"
+import { switchLangWidget } from "../shared/functions/switchLangWidget"
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -21,6 +22,12 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter()
   const getLayout = Component.getLayout ?? ((page) => page)
+
+  useEffect(()=>{
+    const currentLocale = pageProps.currentLocale as string
+    switchLangWidget(currentLocale)
+  }, [])
+
   return getLayout(
     <NextIntlClientProvider
       locale={router.locale}
