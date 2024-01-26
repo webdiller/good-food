@@ -24,12 +24,15 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   useEffect(()=>{
-    try {
-      const currentLocale = pageProps.currentLocale as string
-      switchLangWidget(currentLocale)
-    } catch (error) {
-      console.log(error);
+    if (window && typeof window !== "undefined") {
+      try {
+        const currentLocale = pageProps.currentLocale as string
+        switchLangWidget(currentLocale)
+      } catch (error) {
+        console.log(error);
+      }
     }
+    
   }, [pageProps])
 
   return getLayout(
