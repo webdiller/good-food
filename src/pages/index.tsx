@@ -2,7 +2,7 @@ import { NextPageWithLayout } from "./_app"
 import HomePage from "@/src/pages-flat/HomePage"
 import { ReactElement } from "react"
 import DefaultLayout from "@/src/widgets/Layouts/DefaultLayout"
-import { NextSeo } from "next-seo"
+import { DefaultSeoProps, NextSeo } from "next-seo"
 import { GetStaticPropsContext } from "next"
 import { useTranslations } from "next-intl"
 import { sharedi18n } from "../shared/i18n"
@@ -15,36 +15,38 @@ import imgBanner1MobileJpgKA from "@/public/banners/ka/banner-1-mob.jpg"
 
 interface PageProps {
   messages: any
-  currentLocale: typeof sharedi18n.locales[number]
+  currentLocale: (typeof sharedi18n.locales)[number]
 }
 
 const Page: NextPageWithLayout<PageProps> = ({ messages, currentLocale }) => {
-  const t = useTranslations("pages.home.meta");
+  const t = useTranslations("pages.home.meta")
   let ogImage = imgBanner1MobileJpgRU
   if (currentLocale === "en") ogImage = imgBanner1MobileJpgEN
   if (currentLocale === "ka") ogImage = imgBanner1MobileJpgKA
 
+  const defaultSeoProps: DefaultSeoProps = {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      url: process.env.WEBSITE_URL,
+      title: t("ogImageTitle"),
+      description: t("ogImageDescription"),
+      images: [
+        {
+          url: `${process.env.WEBSITE_URL}${ogImage.src}`,
+          width: ogImage.width,
+          height: ogImage.height,
+          alt: "Og Image Alt",
+          type: "image/jpeg",
+        },
+      ],
+      siteName: "GoodFood",
+    },
+  }
+
   return (
     <>
-      <NextSeo
-        title={t("title")}
-        description={t("description")}
-        openGraph={{
-          url: process.env.WEBSITE_URL,
-          title: t("ogImageTitle"),
-          description: t("ogImageDescription"),
-          images: [
-            {
-              url: ogImage.src,
-              width: ogImage.width,
-              height: ogImage.height,
-              alt: 'Og Image Alt',
-              type: 'image/jpeg',
-            },
-          ],
-          siteName: 'GoodFood',
-        }}
-      />
+      <NextSeo {...defaultSeoProps} />
       <PublicHeader />
       <HomePage currentLocale={currentLocale} />
       <Footer />
@@ -56,9 +58,9 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,
-      currentLocale: locale
-    }
-  };
+      currentLocale: locale,
+    },
+  }
 }
 
 Page.getLayout = function getLayout(page: ReactElement) {

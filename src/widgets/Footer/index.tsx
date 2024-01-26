@@ -1,3 +1,4 @@
+import { sharedSocialNav, sharedSocialNavArray } from "@/src/shared/consts"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { FC } from "react"
@@ -37,33 +38,12 @@ const Footer: FC<ComponentProps> = () => {
     },
   ]
 
-  
-
-  const socialNav = [
-    {
-      label: "FB",
-      href: "http://facebook.com/goodfood.tbilisi",
-    },
-    {
-      label: "IG",
-      href: "https://www.instagram.com/goodfoodge/",
-    },
-    {
-      label: "TG",
-      href: "https://t.me/goodfoodge",
-    },
-    {
-      label: "WA",
-      href: "http://wa.me/995599885710",
-    }
-  ]
-
   return (
     <footer className="pb-2.5 pt-8.5 lg:bg-[#FAFAFA] lg:py-6.5">
       <div className="container flex flex-col items-center text-center">
         {/* SOCIALS */}
         <div className="mx-auto mb-4.5 flex w-full max-w-[300px] justify-between gap-1 lg:max-w-[540px]">
-          {socialNav.map((item, indx) => {
+          {sharedSocialNavArray.map((item, indx) => {
             return (
               <Link
               target="_blank"
